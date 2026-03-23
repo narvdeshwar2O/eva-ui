@@ -35,6 +35,10 @@ import QuestionCategoryList from '../views/TestSeries/Questions/QuestionCategory
 import GeneralSettings from '../views/TestSeries/Settings/GeneralSettings.vue';
 import LocalizationSettings from '../views/TestSeries/Settings/LocalizationSettings.vue';
 import Dashboard from '../views/TestSeries/Dashboard.vue';
+import QuizList from '../views/TestSeries/Quizzes/QuizList.vue';
+import CreateQuiz from '../views/TestSeries/Quizzes/CreateQuiz.vue';
+import QuizAnalytics from '../views/TestSeries/Quizzes/QuizAnalytics.vue';
+import QuizSchedules from '../views/TestSeries/Quizzes/QuizSchedules.vue';
 import NotFound from '../views/Errors/NotFound.vue';
 
 Vue.use(VueRouter);
@@ -85,6 +89,11 @@ const routes = [
       { path: 'tags', name: 'test-series-tags', component: TagList },
       { path: 'settings/general', name: 'test-series-settings-general', component: GeneralSettings },
       { path: 'settings/localization', name: 'test-series-settings-localization', component: LocalizationSettings },
+      { path: 'quizzes', name: 'quiz-list', component: QuizList },
+      { path: 'quizzes/new', name: 'quiz-create', component: CreateQuiz },
+      { path: 'quizzes/:id/edit', name: 'quiz-edit', component: CreateQuiz },
+      { path: 'quizzes/:id/analytics', name: 'quiz-analytics', component: QuizAnalytics },
+      { path: 'quizzes/:id/schedules', name: 'quiz-schedules', component: QuizSchedules },
     ]
   },
   { path: '*', name: 'not-found', component: NotFound }
