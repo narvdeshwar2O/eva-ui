@@ -24,7 +24,6 @@ import ExamTemplateList from '../views/TestSeries/Tests/ExamTemplateList.vue';
 import QuizTypeList from '../views/TestSeries/Tests/QuizTypeList.vue';
 import ExamTypeList from '../views/TestSeries/Tests/ExamTypeList.vue';
 import ComprehensionList from '../views/TestSeries/Questions/ComprehensionList.vue';
-import QuestionList from '../views/TestSeries/Questions/QuestionList.vue';
 import UserList from '../views/TestSeries/Users/UserList.vue';
 import UserGroupList from '../views/TestSeries/Users/UserGroupList.vue';
 import CategoryList from '../views/TestSeries/Categories/CategoryList.vue';
@@ -39,6 +38,8 @@ import QuizList from '../views/TestSeries/Quizzes/QuizList.vue';
 import CreateQuiz from '../views/TestSeries/Quizzes/CreateQuiz.vue';
 import QuizAnalytics from '../views/TestSeries/Quizzes/QuizAnalytics.vue';
 import QuizSchedules from '../views/TestSeries/Quizzes/QuizSchedules.vue';
+import QuestionList from '../views/TestSeries/Questions/QuestionList.vue';
+import CreateQuestion from '../views/TestSeries/Questions/CreateQuestion.vue';
 import NotFound from '../views/Errors/NotFound.vue';
 
 Vue.use(VueRouter);
@@ -81,7 +82,6 @@ const routes = [
       { path: 'quiz-types', name: 'test-series-quiz-types', component: QuizTypeList },
       { path: 'exam-types', name: 'test-series-exam-types', component: ExamTypeList },
       { path: 'comprehensions', name: 'test-series-comprehensions', component: ComprehensionList },
-      { path: 'questions', name: 'test-series-questions', component: QuestionList },
       { path: 'users', name: 'test-series-users', component: UserList },
       { path: 'user-groups', name: 'test-series-user-groups', component: UserGroupList },
       { path: 'categories', name: 'test-series-categories', component: CategoryList },
@@ -94,6 +94,9 @@ const routes = [
       { path: 'quizzes/:id/edit', name: 'quiz-edit', component: CreateQuiz },
       { path: 'quizzes/:id/analytics', name: 'quiz-analytics', component: QuizAnalytics },
       { path: 'quizzes/:id/schedules', name: 'quiz-schedules', component: QuizSchedules },
+      { path: 'questions', name: 'question-list', component: QuestionList },
+      { path: 'questions/new', name: 'question-create', component: CreateQuestion },
+      { path: 'questions/:id/edit', name: 'question-edit', component: CreateQuestion },
     ]
   },
   { path: '*', name: 'not-found', component: NotFound }
